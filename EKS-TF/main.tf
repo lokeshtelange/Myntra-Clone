@@ -86,7 +86,7 @@ resource "aws_route_table_association" "subnet2_association" {
 data "aws_subnets" "public" {
   filter {
     name   = "vpc-id"
-    values = [data.aws_vpc.main.id]
+    values = [resource.aws_vpc.main.id]
   }
 }
 #cluster provision

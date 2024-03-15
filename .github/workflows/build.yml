@@ -34,10 +34,10 @@ jobs:
   
       - name: Run docker-scout cves
         run: /usr/local/bin/docker-scout cves fs://
-      - name: Docker Scout Scan
-        run: |
-          docker-scout quickview fs://.
-          docker-scout cves fs://.
+      # - name: Docker Scout Scan
+      #   run: |
+      #     docker-scout quickview fs://.
+      #     docker-scout cves fs://.
       - name: Docker build and push
         run: |
           # Run commands to build and push Docker images

@@ -46,7 +46,7 @@ resource "aws_route_table" "route_table" {
 
   route {
     cidr_block = "0.0.0.0/0"
-    gateway_id = "your_internet_gateway_id"  # Replace with your internet gateway ID
+    gateway_id = "igw-02e554e7396993222"  # Replace with your internet gateway ID
   }
 }
 

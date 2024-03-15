@@ -22,7 +22,7 @@ resource "aws_iam_role_policy_attachment" "example-AmazonEKSClusterPolicy" {
 }
 
 #get vpc data
-data "main" "default" {
+data "aws_vpc" "main" {
   default = true
 }
 #get public subnets for cluster

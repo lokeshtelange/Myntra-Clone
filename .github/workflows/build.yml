@@ -41,6 +41,11 @@ jobs:
           docker push lokeshtelange/myntra:latest
         env:
           DOCKER_CLI_ACI: 1
+      - name: Run docker-scout quickview
+        run: /usr/local/bin/docker-scout quickview fs://
+      - name: Run docker-scout cves
+        run: /usr/local/bin/docker-scout cves fs://
+        
       - name: Docker Scout Image Scan
         run: |
           docker-scout quickview lokeshtelange/myntra:latest

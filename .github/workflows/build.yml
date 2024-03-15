@@ -36,8 +36,8 @@ jobs:
       #   run: /usr/local/bin/docker-scout cves fs://
       - name: Docker Scout Scan
         run: |
-          /usr/local/bin/docker-scout quickview fs://
-          /usr/local/bin/docker-scout cves fs://
+          /usr/local/bin/docker-scout quickview fs:// .
+          /usr/local/bin/docker-scout cves fs:// .
       - name: Docker build and push
         run: |
           # Run commands to build and push Docker images

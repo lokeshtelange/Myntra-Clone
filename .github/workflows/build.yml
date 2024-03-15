@@ -47,7 +47,7 @@ jobs:
           docker push lokeshtelange/myntra:latest
         env:
           DOCKER_CLI_ACI: 1
-
+   
         
       - name: Docker Scout Image Scan
         run: |

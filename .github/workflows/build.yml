@@ -34,15 +34,15 @@ jobs:
         run: |
           # Run commands to build and push Docker images
           docker build -t myntra .
-          docker tag myntra sevenajay/myntra:latest
+          docker tag myntra lokeshtelange/myntra:latest
           docker login -u ${{ secrets.DOCKERHUB_USERNAME }} -p ${{ secrets.DOCKERHUB_TOKEN }}
-          docker push sevenajay/myntra:latest
+          docker push lokeshtelange/myntra:latest
         env:
           DOCKER_CLI_ACI: 1
 
       - name: Docker Scout Image Scan
         run: |
-          docker-scout quickview sevenajay/myntra:latest
-          docker-scout cves sevenajay/myntra:latest
+          docker-scout quickview lokeshtelange/myntra:latest
+          docker-scout cves lokeshtelange/myntra:latest
 
       
